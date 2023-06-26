@@ -1,0 +1,5 @@
+1001564077531
+const token = '6228120174:AAF3Sbqsw68BC8y1CxZe6LPcjhNCzwAXg2I';
+const { Telegraf } = require('telegraf');
+const session = require('telegraf/session');
+const fs = require('fs');
