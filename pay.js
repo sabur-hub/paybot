@@ -3,7 +3,7 @@ const session = require('telegraf/session');
 const fs = require('fs');
 const postgres = require('postgres')
 
-const token = '6228120174:AAF3Sbqsw68BC8y1CxZe6LPcjhNCzwAXg2I';
+const token = '';
 const bot = new Telegraf(token);
 bot.use(session());
 
@@ -46,7 +46,7 @@ bot.on('photo', async (ctx) => {
     const chatId = ctx.chat.id;
     const photoId = ctx.message.photo[0].file_id;
 
-    const managerChatId = '-1001564077531';
+    const managerChatId = '';
 
     const date = new Date();
     const dateTimeString = date.toLocaleString();
@@ -63,7 +63,7 @@ bot.on('photo', async (ctx) => {
     await ctx.telegram.sendPhoto(managerChatId, photoId);
     await ctx.telegram.sendMessage(managerChatId, messageText);
 
-    const groupChatId = '-1001564077531';
+    const groupChatId = '';
     await sendGroupButtons(groupChatId, chatId, subscriptionType, id);
 });
 
